@@ -19,6 +19,8 @@
 		E2876DCD19534A0900BB890F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2876DB519534A0900BB890F /* UIKit.framework */; };
 		E2876DD519534A0900BB890F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2876DD319534A0900BB890F /* InfoPlist.strings */; };
 		E2876DD719534A0900BB890F /* FBPostTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2876DD619534A0900BB890F /* FBPostTests.m */; };
+		E2876DE319534A2E00BB890F /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2876DE119534A2E00BB890F /* PostViewController.m */; };
+		E2876DE419534A2E00BB890F /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2876DE219534A2E00BB890F /* PostViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		E2876DD219534A0900BB890F /* FBPostTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBPostTests-Info.plist"; sourceTree = "<group>"; };
 		E2876DD419534A0900BB890F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E2876DD619534A0900BB890F /* FBPostTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBPostTests.m; sourceTree = "<group>"; };
+		E2876DE019534A2E00BB890F /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostViewController.h; path = ../PostViewController.h; sourceTree = "<group>"; };
+		E2876DE119534A2E00BB890F /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostViewController.m; path = ../PostViewController.m; sourceTree = "<group>"; };
+		E2876DE219534A2E00BB890F /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostViewController.xib; path = ../PostViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,7 @@
 				E2876DC019534A0900BB890F /* AppDelegate.h */,
 				E2876DC119534A0900BB890F /* AppDelegate.m */,
 				E2876DC319534A0900BB890F /* Images.xcassets */,
+				E2876DE519534A3300BB890F /* ViewControllers */,
 				E2876DB819534A0900BB890F /* Supporting Files */,
 			);
 			path = FBPost;
@@ -142,6 +148,16 @@
 				E2876DD319534A0900BB890F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2876DE519534A3300BB890F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2876DE019534A2E00BB890F /* PostViewController.h */,
+				E2876DE119534A2E00BB890F /* PostViewController.m */,
+				E2876DE219534A2E00BB890F /* PostViewController.xib */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +237,7 @@
 			files = (
 				E2876DBC19534A0900BB890F /* InfoPlist.strings in Resources */,
 				E2876DC419534A0900BB890F /* Images.xcassets in Resources */,
+				E2876DE419534A2E00BB890F /* PostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +258,7 @@
 			files = (
 				E2876DC219534A0900BB890F /* AppDelegate.m in Sources */,
 				E2876DBE19534A0900BB890F /* main.m in Sources */,
+				E2876DE319534A2E00BB890F /* PostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +378,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBPost/FBPost-Prefix.pch";
 				INFOPLIST_FILE = "FBPost/FBPost-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBPost/FBPost-Prefix.pch";
 				INFOPLIST_FILE = "FBPost/FBPost-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
