@@ -55,7 +55,12 @@
     [super viewDidLoad];
     [self likeView];
    
-    //self.commentTextField.layer.cornerRadius = 3;
+    self.postView.layer.cornerRadius = 3;
+    self.postView.layer.borderColor = [UIColor colorWithRed:.5 green:.5 blue:.5 alpha:0.35].CGColor;
+    self.postView.layer.borderWidth = 1;
+    
+    
+    self.postView.layer.shadowOffset = CGSizeMake(-15, 20);
     NSLog(@"View finished loading...");
 }
 
@@ -68,7 +73,7 @@
 - (IBAction)onTap:(id)sender {
     NSLog(@"commenting ended");
     [self.view endEditing:YES];
-    self.commentBar.frame = CGRectMake(self.commentBar.frame.origin.x,self.commentBar.frame.origin.y, self.commentBar.frame.size.height, self.commentBar.frame.size.width);
+    self.commentBar.frame = CGRectMake(self.commentBar.frame.origin.x,481, self.commentBar.frame.size.height, self.commentBar.frame.size.width);
 
 }
 
