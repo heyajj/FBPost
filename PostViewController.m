@@ -70,23 +70,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+//ends editing, brings keyboard down
 - (IBAction)onTap:(id)sender {
     NSLog(@"commenting ended");
     [self.view endEditing:YES];
-    self.commentBar.frame = CGRectMake(self.commentBar.frame.origin.x,481, self.commentBar.frame.size.height, self.commentBar.frame.size.width);
+    [UIView animateWithDuration :0.2 animations:^{self.commentBar.frame = CGRectMake(self.commentBar.frame.origin.x, 481, self.commentBar.frame.size.height, self.commentBar.frame.size.width);}];
 
 }
 
+//begins editing, brings keyboard up
 - (IBAction)onCommentEditing:(id)sender {
     NSLog(@"commenting began");
-    self.commentBar.frame = CGRectMake(self.commentBar.frame.origin.x, 308, self.commentBar.frame.size.height, self.commentBar.frame.size.width);
+    [UIView animateWithDuration :0.2 animations:^{self.commentBar.frame = CGRectMake(self.commentBar.frame.origin.x, 308, self.commentBar.frame.size.height, self.commentBar.frame.size.width);}];
     
 }
-
 - (IBAction)onLikeButton:(id)sender {
     NSLog(@"On touch up inside");
 }
 
+//toggles like button
 - (IBAction)onLikeDown:(id)sender {
     NSLog(@"On touch down");
     _likeView.selected = !_likeView.selected;
@@ -98,12 +100,17 @@
 
 - (IBAction)onCommentButton:(id)sender {
     NSLog(@"On touch up inside");
+   
 }
 
+//begins editing, brings up keyboard
 - (IBAction)onCommentDown:(id)sender {
     NSLog(@"On touch down");
+    //self.commentTextField.selected = YES;
+    //[_commentBar canBecomeFirstResponder];
+    //[UIView animateWithDuration :0.2 animations:^{self.commentBar.frame = CGRectMake(self.commentBar.frame.origin.x, 308, self.commentBar.frame.size.height, self.commentBar.frame.size.width);}];
 }
-
+    
 - (IBAction)onCommentOutside:(id)sender {
     NSLog(@"On touch up outside");
 }

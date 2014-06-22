@@ -56,13 +56,32 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlI-aD-PhT">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlI-aD-PhT">
                             <rect key="frame" x="8" y="40" width="268" height="71"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <string key="text">From collarless shirts to high-waisted pants, #Her's costume designer, Casey Storm, explains how he created his fashion looks for the future:</string>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                            <attributedString key="attributedText">
+                                <fragment content="From collarless shirts to high-waisted pants, ">
+                                    <attributes>
+                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="#Her's">
+                                    <attributes>
+                                        <font key="NSFont" size="13" name="HelveticaNeue-Medium"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content=" costume designer, Casey Storm, explains how he created his fashion looks for the future:">
+                                    <attributes>
+                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
                         </textView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="http://bit.ly/1jV9zM8" translatesAutoresizingMaskIntoConstraints="NO" id="4JE-9Y-owI">
                             <rect key="frame" x="90" y="87" width="148" height="29"/>
@@ -89,10 +108,12 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="  Like" image="like_btn" backgroundImage="bar_bg_rpt">
                                         <color key="titleColor" white="0.75" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="titleShadowColor" red="0.51530612239999996" green="0.51530612239999996" blue="0.51530612239999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
-                                    <state key="selected" image="like_btn_selected" backgroundImage="bar_bg_rpt"/>
-                                    <state key="highlighted" image="like_btn_selected" backgroundImage="bar_bg_rpt_highlight">
+                                    <state key="selected" image="like_btn_selected" backgroundImage="bar_bg_rpt">
+                                        <color key="titleColor" red="0.35861563610000002" green="0.60006256059999996" blue="0.86754623720000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="highlighted" image="like_btn_selected" backgroundImage="bar_bg_rpt">
                                         <color key="titleColor" red="0.35861563610000002" green="0.60006256059999996" blue="0.86754623720000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                     <connections>
@@ -116,7 +137,8 @@
                                     <state key="highlighted" image="comment_btn" backgroundImage="bar_bg_rpt_highlight"/>
                                     <connections>
                                         <action selector="onCommentButton:" destination="-1" eventType="touchUpInside" id="kNm-vP-Cer"/>
-                                        <action selector="onCommentDown:" destination="-1" eventType="touchDown" id="kZy-ht-Rhg"/>
+                                        <action selector="onCommentDown:" destination="-1" eventType="touchDown" id="1hS-Cv-FWB"/>
+                                        <action selector="onCommentDown:" destination="-1" eventType="touchUpInside" id="Tpw-bf-rYo"/>
                                         <action selector="onCommentOutside:" destination="-1" eventType="touchUpOutside" id="ihk-yO-UD0"/>
                                         <outletCollection property="gestureRecognizers" destination="duY-HO-VVo" appends="YES" id="g4P-EH-wyc"/>
                                     </connections>
