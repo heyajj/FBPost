@@ -2,7 +2,7 @@ FBPost
 ======
 Setting up project.
 Spent 2hrs laying out the UI for the post view
-Spent 3hrs hooking up Like Toggle and various other refinements
+Spent 4hrs hooking up Like Toggle and various other refinements
 Spent 4hrs hooking up the Comment field animation and other UI polish
 
 Required Stories Completed
