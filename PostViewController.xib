@@ -113,7 +113,7 @@
                                     <state key="selected" image="like_btn_selected" backgroundImage="bar_bg_rpt">
                                         <color key="titleColor" red="0.35861563610000002" green="0.60006256059999996" blue="0.86754623720000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
-                                    <state key="highlighted" image="like_btn_selected" backgroundImage="bar_bg_rpt">
+                                    <state key="highlighted" image="like_btn_selected" backgroundImage="bar_bg_rpt_highlight">
                                         <color key="titleColor" red="0.35861563610000002" green="0.60006256059999996" blue="0.86754623720000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                     <connections>
