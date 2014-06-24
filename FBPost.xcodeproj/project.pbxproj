@@ -23,6 +23,7 @@
 		E2876DE419534A2E00BB890F /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2876DE219534A2E00BB890F /* PostViewController.xib */; };
 		E2876DE919536B6C00BB890F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2876DE719536B6C00BB890F /* TestViewController.m */; };
 		E2876DEA19536B6C00BB890F /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2876DE819536B6C00BB890F /* TestViewController.xib */; };
+		E2FA9ABD1958ECEF0022507B /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9ABC1958ECEF0022507B /* TTTAttributedLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		E2876DE619536B6C00BB890F /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		E2876DE719536B6C00BB890F /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		E2876DE819536B6C00BB890F /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		E2FA9ABC1958ECEF0022507B /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = "../../Downloads/TTTAttributedLabel-master/TTTAttributedLabel/TTTAttributedLabel.m"; sourceTree = "<group>"; };
+		E2FA9ABF1958ED170022507B /* TTTAttributedLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = "../../Downloads/TTTAttributedLabel-master/TTTAttributedLabel/TTTAttributedLabel.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 			children = (
 				E2876DB719534A0900BB890F /* FBPost */,
 				E2876DD019534A0900BB890F /* FBPostTests */,
+				E2FA9ABE1958ECF70022507B /* Vendor */,
 				E2876DB019534A0900BB890F /* Frameworks */,
 				E2876DAF19534A0900BB890F /* Products */,
 			);
@@ -166,6 +170,23 @@
 				E2876DE819536B6C00BB890F /* TestViewController.xib */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E2FA9ABE1958ECF70022507B /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA9AC01958ED210022507B /* TTAttributedLabel */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		E2FA9AC01958ED210022507B /* TTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA9ABF1958ED170022507B /* TTTAttributedLabel.h */,
+				E2FA9ABC1958ECEF0022507B /* TTTAttributedLabel.m */,
+			);
+			name = TTAttributedLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +290,7 @@
 				E2876DBE19534A0900BB890F /* main.m in Sources */,
 				E2876DE919536B6C00BB890F /* TestViewController.m in Sources */,
 				E2876DE319534A2E00BB890F /* PostViewController.m in Sources */,
+				E2FA9ABD1958ECEF0022507B /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +489,7 @@
 				E2876DDC19534A0900BB890F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2876DDD19534A0900BB890F /* Build configuration list for PBXNativeTarget "FBPostTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +498,7 @@
 				E2876DDF19534A0900BB890F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,9 +8,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostViewController">
             <connections>
                 <outlet property="actionView" destination="wZ4-Vy-KUs" id="DP5-pI-Nl2"/>
+                <outlet property="avatarView" destination="WId-qZ-d3N" id="yIl-XN-7gI"/>
                 <outlet property="commentBar" destination="0ls-v7-2Y4" id="zwZ-QA-QnX"/>
                 <outlet property="commentTextField" destination="UX1-DU-amJ" id="yYE-Fw-etc"/>
                 <outlet property="likeView" destination="rFY-5i-3mZ" id="Loh-Hh-Src"/>
+                <outlet property="links" destination="4JE-9Y-owI" id="9ay-ws-Bn8"/>
                 <outlet property="postView" destination="0bK-9S-DOS" id="2P8-8Y-QIV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,10 +26,6 @@
                     <rect key="frame" x="12" y="76" width="296" height="460"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="WId-qZ-d3N">
-                            <rect key="frame" x="8" y="9" width="34" height="34"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7w-t6-ZuN">
                             <rect key="frame" x="50" y="9" width="184" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,22 +40,8 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWa-dB-H2y">
-                            <rect key="frame" x="50" y="24" width="192" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <attributedString key="attributedText">
-                                <fragment content="February 1 at 11:00 AM">
-                                    <attributes>
-                                        <color key="NSColor" white="0.75" alpha="1" colorSpace="calibratedWhite"/>
-                                        <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlI-aD-PhT">
-                            <rect key="frame" x="8" y="40" width="268" height="71"/>
+                            <rect key="frame" x="8" y="38" width="268" height="73"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <attributedString key="attributedText">
@@ -83,15 +67,40 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             <dataDetectorType key="dataDetectorTypes" link="YES"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="http://bit.ly/1jV9zM8" translatesAutoresizingMaskIntoConstraints="NO" id="4JE-9Y-owI">
-                            <rect key="frame" x="90" y="87" width="148" height="29"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4JE-9Y-owI">
+                            <rect key="frame" x="94" y="87" width="148" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <color key="textColor" red="0.35861563614479081" green="0.60006256058032681" blue="0.86754623724489799" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <attributedString key="attributedText">
+                                <fragment content="http://bit.ly/1jV9zM8">
+                                    <attributes>
+                                        <color key="NSColor" red="0.35861563614479081" green="0.60006256058032681" blue="0.86754623724489799" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="WId-qZ-d3N">
+                            <rect key="frame" x="8" y="9" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWa-dB-H2y">
+                            <rect key="frame" x="50" y="24" width="192" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <attributedString key="attributedText">
+                                <fragment content="February 1 at 11:00 AM">
+                                    <attributes>
+                                        <color key="NSColor" white="0.75" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZ4-Vy-KUs">
                             <rect key="frame" x="0.0" y="307" width="296" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -184,14 +193,14 @@
                         <outletCollection property="gestureRecognizers" destination="HYg-oU-R2y" appends="YES" id="Qix-xI-PuC"/>
                     </connections>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navbar" translatesAutoresizingMaskIntoConstraints="NO" id="qIO-Ma-TqH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_image" translatesAutoresizingMaskIntoConstraints="NO" id="9Ay-da-2HD">
                     <rect key="frame" x="7" y="200" width="306" height="169"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navbar" translatesAutoresizingMaskIntoConstraints="NO" id="qIO-Ma-TqH">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ls-v7-2Y4">
                     <rect key="frame" x="0.0" y="481" width="320" height="44"/>
@@ -223,16 +232,6 @@
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU6-MS-T5P">
-                    <rect key="frame" x="270" y="20" width="50" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onShareTap:" destination="-1" eventType="touchUpInside" id="gwt-Z8-5Yq"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.86218559412643669" green="0.86958867258343508" blue="0.88679846938775508" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
