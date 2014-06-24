@@ -1,6 +1,11 @@
 FBPost
 ======
-Setting up project.
+
+
+![alt tag] (FBPost-walkthrough.gif)
+
+Work Log:
+
 Spent 3hrs laying out the UI for the post view
 Spent 5hrs hooking up Like Toggle and various other refinements
 Spent 4hrs hooking up the Comment field animation and other UI polish
